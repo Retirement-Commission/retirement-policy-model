@@ -4,6 +4,29 @@ An R/Shiny scenario model for exploring selected changes to New Zealand Superann
 
 The model supports policy exploration and discussion. It is not an official government forecast, costing, or policy position.
 
+## Live tool and hosting
+
+Live tool: https://retirement-commission.github.io/retirement-policy-model/
+
+The live tool is hosted on GitHub Pages from this repository (branch `main`, folder `/docs`). The `docs/` folder contains a Shinylive export of the app: R runs in the user's own web browser, so no server is involved. The first load downloads R into the browser and can take up to a minute; later visits are faster.
+
+## How to update the live tool
+
+Every commit to `main` that changes `docs/` goes live, so test changes before committing.
+
+1. Make and test changes in `app/` locally: `renv::restore()`, then `shiny::runApp("app")`, then `source("scripts/check-release.R")`.
+2. Build the static site: `source("scripts/export-shinylive.R")`. This creates a `site/` folder.
+3. Replace the contents of `docs/` with the contents of `site/`, **except** `docs/architecture.md` and `docs/public-source-manifest.csv`, which are documentation and must be kept.
+4. Commit and push to `main`. Because the export contains hundreds of files, use Git or GitHub Desktop rather than GitHub's web upload (which is limited to 100 files at a time).
+5. GitHub Pages republishes automatically within a few minutes. Check the live tool afterwards.
+
+## Ownership and history
+
+- Owned by Te Ara Ahunga Ora Retirement Commission. Business owner and technical owner: Te Ara Ahunga Ora Retirement Commission.
+- Commissioned by Te Ara Ahunga Ora Retirement Commission and developed by Heuser | Whittington.
+- Handover documents (methodology, maintenance instructions, end-user guidance) and the raw public-data bundle: location TBC.
+- Contact: office@retirement.govt.nz
+
 ## What is included
 
 - Fiscal impacts: aggregate NZ Super costs, annual saving decomposition, and net-present-value summaries.
@@ -37,7 +60,7 @@ source("scripts/export-shinylive.R")
 httpuv::runStaticServer("site")
 ```
 
-`site/` is a disposable build output and is deliberately excluded from version control. This repository does not prescribe a deployment platform or include hosting automation.
+`site/` is a disposable build output and is deliberately excluded from version control. The Retirement Commission publishes the live tool via GitHub Pages; see "Live tool and hosting" above.
 
 ## Repository structure
 
