@@ -25,7 +25,6 @@ Every commit to `main` that changes `docs/` goes live, so test changes before co
 - Owned by Te Ara Ahunga Ora Retirement Commission. Business owner and technical owner: Te Ara Ahunga Ora Retirement Commission.
 - Commissioned by Te Ara Ahunga Ora Retirement Commission and developed by Heuser | Whittington.
 - Handover documents (methodology, maintenance instructions, end-user guidance) and the raw public-data bundle: location TBC.
-- Contact: office@retirement.govt.nz
 
 ## What is included
 
@@ -88,3 +87,15 @@ prepare_app_data("C:/path/to/public-data-bundle")
 The required source files, publisher links, data versions, refresh guidance, redistribution notes, checksums, and downstream prepared data files are listed in [`docs/public-source-manifest.csv`](docs/public-source-manifest.csv). To confirm a refresh exactly reproduces the shipped inputs, set `NZS_PUBLIC_SOURCE_DIR` and run `scripts/check-release.R`.
 
 Detailed methodology, maintenance instructions, and end-user guidance are supplied as separate handover documents.
+
+## Disclaimers and reuse
+
+**Not official advice or a policy position.** This model is a research tool commissioned by Te Ara Ahunga Ora Retirement Commission and developed by Heuser | Whittington to support exploration and discussion of retirement income policy settings. It is not an official government forecast or costing, and its outputs do not constitute Te Ara Ahunga Ora advice, a policy position, or a recommendation on any policy option.
+
+**No warranty or liability.** The model is provided as-is and for research purposes only. Despite reasonable measures taken to ensure quality and accuracy, Te Ara Ahunga Ora makes no warranty or guarantee, express or implied, and accepts no legal liability or responsibility for the accuracy, correctness or completeness of the model or its outputs, or for any use made of them.
+
+**Not official statistics.** Results are model estimates, not official statistics. They are derived from publicly available data published by the Treasury, Inland Revenue, Stats NZ and the Ministry of Social Development, used under the terms of each source's licence (for example, Creative Commons Attribution 4.0). Sources and required attributions are listed in `docs/public-source-manifest.csv`.
+
+**Reuse.** You may use, modify and adapt this code for your own work, provided Te Ara Ahunga Ora Retirement Commission is acknowledged as the source. The underlying data remains subject to the licence terms of its original publishers. While all care has been taken in developing this code, Te Ara Ahunga Ora gives no warranty that it is error-free and will not be liable for any loss or damage suffered as a result of its use, either directly or indirectly.
+
+**Feedback welcome.** We welcome suggestions, feedback and corrections. Please contact office@retirement.govt.nz.
